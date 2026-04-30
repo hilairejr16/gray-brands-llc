@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gray Brands LLC Beauty Blog — Tips, tutorials, and lifestyle content for the modern woman.">
+  <title>Blog — Gray Brands LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+</head>
+<body data-page="blog">
+
+  <header id="site-header">
+    <div class="promo-bar">
+      <span data-i18n="promoBar">Free shipping on orders over $50</span>
+    </div>
+    <div class="nav-top container">
+      <div class="nav-top-links">
+        <a href="#" data-i18n="signIn">Sign In</a>
+        <a href="#" data-i18n="trackOrder">Track Order</a>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span style="color:var(--border-dark)">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+    <div class="nav-main container">
+      <div class="nav-logo"><a href="index.html">Gray <span>Brands</span></a></div>
+      <form class="nav-search search-form" role="search">
+        <input type="search" data-i18n="searchPlaceholder" placeholder="Search…">
+        <button type="submit">🔍</button>
+      </form>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-action-btn open-cart cart-btn-wrap">
+          <span class="icon">🛒</span>
+          <span class="nav-action-label" data-i18n="cart">Cart</span>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-categories container">
+      <a href="index.html" class="nav-cat-link" data-i18n="home">Home</a>
+      <a href="shop.html" class="nav-cat-link" data-i18n="shop">Shop</a>
+      <a href="blog.html" class="nav-cat-link active" data-i18n="blog">Blog</a>
+      <a href="community.html" class="nav-cat-link" data-i18n="community">Community</a>
+      <a href="about.html" class="nav-cat-link" data-i18n="aboutUs">About</a>
+      <a href="contact.html" class="nav-cat-link" data-i18n="contactUs">Contact</a>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="home">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span data-i18n="blog">Blog</span>
+        </div>
+        <h1 data-i18n="blog">Blog</h1>
+        <p data-i18n="fromBlogSub">Beauty tips, tutorials &amp; lifestyle</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <!-- Category filter tabs -->
+        <div class="category-tabs" style="margin-bottom:var(--gap-xl)">
+          <button class="cat-tab active">All</button>
+          <button class="cat-tab">Hair Care</button>
+          <button class="cat-tab">Makeup</button>
+          <button class="cat-tab">Skincare</button>
+          <button class="cat-tab">Wellness</button>
+          <button class="cat-tab">Lifestyle</button>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#F5EEE8,#EDE0D4)">💆‍♀️</div>
+            <div class="blog-card-body">
+              <div class="blog-card-cat">Hair Care</div>
+              <h3 class="blog-card-title">5 Steps to Healthier Hair This Season</h3>
+              <p class="blog-card-excerpt">Discover the expert-approved routine that will transform dry, damaged strands into silky, lustrous locks in just a few weeks.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="blog-card-meta">April 28, 2026 · 4 min read</div>
+                <a href="#" class="section-link" data-i18n="readMore">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#FCF0F0,#F9E0E0)">💄</div>
+            <div class="blog-card-body">
+              <div class="blog-card-cat">Makeup</div>
+              <h3 class="blog-card-title">The 10-Minute Glam Routine for Busy Women</h3>
+              <p class="blog-card-excerpt">Look polished and put-together every morning with these time-saving makeup tips from our beauty experts.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="blog-card-meta">April 20, 2026 · 5 min read</div>
+                <a href="#" class="section-link" data-i18n="readMore">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#EDF5EE,#D8EDD9)">🌿</div>
+            <div class="blog-card-body">
+              <div class="blog-card-cat">Wellness</div>
+              <h3 class="blog-card-title">Self-Care Sunday: Your Ultimate Ritual Guide</h3>
+              <p class="blog-card-excerpt">Create a relaxing, rejuvenating self-care routine that nourishes your body, mind, and spirit every week.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="blog-card-meta">April 15, 2026 · 6 min read</div>
+                <a href="#" class="section-link" data-i18n="readMore">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#F0EBF8,#E4D8F0)">✨</div>
+            <div class="blog-card-body">
+              <div class="blog-card-cat">Skincare</div>
+              <h3 class="blog-card-title">Vitamin C Serums: What They Do &amp; How to Use Them</h3>
+              <p class="blog-card-excerpt">The ultimate guide to incorporating Vitamin C into your skincare routine for radiant, even-toned skin.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="blog-card-meta">April 10, 2026 · 7 min read</div>
+                <a href="#" class="section-link" data-i18n="readMore">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#FFF5E8,#FFE8CC)">🌹</div>
+            <div class="blog-card-body">
+              <div class="blog-card-cat">Lifestyle</div>
+              <h3 class="blog-card-title">How to Build a Signature Fragrance Wardrobe</h3>
+              <p class="blog-card-excerpt">Layer and mix scents like a professional to create your own unique, unforgettable fragrance signature.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="blog-card-meta">April 5, 2026 · 5 min read</div>
+                <a href="#" class="section-link" data-i18n="readMore">Read More</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card-img" style="background:linear-gradient(135deg,#E8F5FC,#CCE8F5)">💍</div>
+            <div class="blog-card-body">
+              <div class="blog-card-cat">Lifestyle</div>
+              <h3 class="blog-card-title">The Art of Jewelry Stacking: A Beginner's Guide</h3>
+              <p class="blog-card-excerpt">Master the trend of layering necklaces, stacking rings, and mixing metals for a curated, intentional look.</p>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div class="blog-card-meta">March 30, 2026 · 4 min read</div>
+                <a href="#" class="section-link" data-i18n="readMore">Read More</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center;margin-top:var(--gap-2xl)">
+          <button class="btn btn-outline">Load More Posts</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section section-dark">
+      <div class="container" style="text-align:center;max-width:500px;margin:0 auto">
+        <h2 style="color:white;margin-bottom:var(--gap-sm)">Beauty Delivered to Your Inbox</h2>
+        <p style="color:rgba(255,255,255,.7);margin-bottom:var(--gap-xl)">Get weekly tips, tutorials, and exclusive offers straight to your inbox.</p>
+        <form style="display:flex;gap:var(--gap-sm);max-width:400px;margin:0 auto" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:var(--accent)\'>Thank you for subscribing! 🎉</p>'">
+          <input type="email" placeholder="Your email address" style="flex:1;padding:12px 16px;border-radius:4px;border:none;font-size:.9rem">
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Cart</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="total" id="cart-subtotal-amt">$0.00</span>
+      </div>
+      <a href="cart.html" class="cart-checkout-btn btn" style="display:block;text-align:center">Checkout</a>
+      <button class="cart-view-btn" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">Gray <span>Brands</span></div>
+          <p>Premium beauty and wellness products for every woman.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">♪</a>
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">G</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=hair">Hair</a></li>
+            <li><a href="shop.html?cat=cosmetics">Cosmetics</a></li>
+            <li><a href="shop.html?cat=perfume">Perfume</a></li>
+            <li><a href="shop.html?cat=jewelry">Jewelry</a></li>
+            <li><a href="shop.html?cat=soap">Soap &amp; Body</a></li>
+            <li><a href="shop.html?cat=accessories">Accessories</a></li>
+            <li><a href="shop.html?cat=wellness">Wellness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Gray Brands LLC. All rights reserved.</p>
+        <div class="payment-icons-footer">
+          <span class="payment-icon-footer">VISA</span>
+          <span class="payment-icon-footer">MC</span>
+          <span class="payment-icon-footer">AMEX</span>
+          <span class="payment-icon-footer">PayPal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js?v=1.0.0"></script>
+  <script src="js/main.js?v=1.0.0"></script>
+</body>
+</html>

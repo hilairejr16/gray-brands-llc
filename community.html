@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gray Brands LLC Community — Events, giveaways, and brand engagement for our beauty community.">
+  <title>Community — Gray Brands LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+</head>
+<body data-page="community">
+
+  <header id="site-header">
+    <div class="promo-bar">
+      <span data-i18n="promoBar">Free shipping on orders over $50</span>
+    </div>
+    <div class="nav-top container">
+      <div class="nav-top-links">
+        <a href="#" data-i18n="signIn">Sign In</a>
+        <a href="#" data-i18n="trackOrder">Track Order</a>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span style="color:var(--border-dark)">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+    <div class="nav-main container">
+      <div class="nav-logo"><a href="index.html">Gray <span>Brands</span></a></div>
+      <form class="nav-search search-form" role="search">
+        <input type="search" data-i18n="searchPlaceholder" placeholder="Search…">
+        <button type="submit">🔍</button>
+      </form>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-action-btn open-cart cart-btn-wrap">
+          <span class="icon">🛒</span>
+          <span class="nav-action-label" data-i18n="cart">Cart</span>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-categories container">
+      <a href="index.html" class="nav-cat-link" data-i18n="home">Home</a>
+      <a href="shop.html" class="nav-cat-link" data-i18n="shop">Shop</a>
+      <a href="blog.html" class="nav-cat-link" data-i18n="blog">Blog</a>
+      <a href="community.html" class="nav-cat-link active" data-i18n="community">Community</a>
+      <a href="about.html" class="nav-cat-link" data-i18n="aboutUs">About</a>
+      <a href="contact.html" class="nav-cat-link" data-i18n="contactUs">Contact</a>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section style="background:linear-gradient(135deg,var(--accent) 0%,var(--accent-dark) 100%);padding:var(--gap-2xl) 0;color:white;text-align:center">
+      <div class="container" style="max-width:620px;margin:0 auto">
+        <p style="font-size:0.8rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:var(--gap-md);opacity:.9" data-i18n="stayConnected">Stay Connected</p>
+        <h1 style="font-size:clamp(2rem,4vw,3rem);color:white;margin-bottom:var(--gap-md)" data-i18n="communityJoin">Join Our Beauty Community</h1>
+        <p style="opacity:.9;font-size:1.05rem;margin-bottom:var(--gap-xl)" data-i18n="communitySub">Events, giveaways, and exclusive member perks.</p>
+        <div style="display:flex;gap:var(--gap-md);justify-content:center;flex-wrap:wrap">
+          <a href="#events" class="btn btn-outline" style="border-color:white;color:white">Upcoming Events</a>
+          <a href="contact.html" class="btn" style="background:white;color:var(--accent)">Join Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header centered">
+          <h2>Follow the Beauty Journey</h2>
+          <p>Connect with us across all platforms for daily inspiration, tutorials, and exclusive deals</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:var(--gap-md);max-width:800px;margin:0 auto">
+          <a href="#" class="value-card" style="border:1.5px solid var(--border);border-radius:var(--radius-lg);text-decoration:none;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+            <div class="value-icon" style="font-size:2rem">f</div>
+            <h4>Facebook</h4>
+            <p style="font-size:.75rem">@GrayBrandsLLC</p>
+          </a>
+          <a href="#" class="value-card" style="border:1.5px solid var(--border);border-radius:var(--radius-lg);text-decoration:none;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+            <div class="value-icon">📷</div>
+            <h4>Instagram</h4>
+            <p style="font-size:.75rem">@GrayBrandsLLC</p>
+          </a>
+          <a href="#" class="value-card" style="border:1.5px solid var(--border);border-radius:var(--radius-lg);text-decoration:none;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+            <div class="value-icon">♪</div>
+            <h4>TikTok</h4>
+            <p style="font-size:.75rem">@GrayBrandsLLC</p>
+          </a>
+          <a href="#" class="value-card" style="border:1.5px solid var(--border);border-radius:var(--radius-lg);text-decoration:none;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+            <div class="value-icon">𝕏</div>
+            <h4>Twitter</h4>
+            <p style="font-size:.75rem">@GrayBrandsLLC</p>
+          </a>
+          <a href="#" class="value-card" style="border:1.5px solid var(--border);border-radius:var(--radius-lg);text-decoration:none;transition:box-shadow .2s,transform .2s" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,.1)';this.style.transform='translateY(-4px)'" onmouseout="this.style.boxShadow='';this.style.transform=''">
+            <div class="value-icon">G</div>
+            <h4>Google</h4>
+            <p style="font-size:.75rem">Gray Brands LLC</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section" id="events">
+      <div class="container">
+        <div class="section-header">
+          <h2>Upcoming Events</h2>
+          <p>Meet us in person, online, and everywhere in between</p>
+        </div>
+        <div class="events-grid">
+          <div class="event-card">
+            <div class="event-card-img">💆‍♀️</div>
+            <div class="event-card-body">
+              <div class="event-date">May 15, 2026 · Virtual</div>
+              <h3>Live Beauty Masterclass: Summer Skincare</h3>
+              <p>Join our expert esthetician for a live tutorial on building the perfect summer skincare routine. Q&amp;A included.</p>
+              <a href="contact.html" class="btn btn-outline btn-ghost" style="font-size:.8rem;padding:8px 16px">Register Free</a>
+            </div>
+          </div>
+          <div class="event-card">
+            <div class="event-card-img">💄</div>
+            <div class="event-card-body">
+              <div class="event-date">May 22, 2026 · TikTok Live</div>
+              <h3>TikTok Live Shopping Event</h3>
+              <p>Shop new arrivals live on TikTok with exclusive flash deals, giveaways, and beauty demos. Don't miss out!</p>
+              <a href="#" class="btn btn-outline btn-ghost" style="font-size:.8rem;padding:8px 16px">Set Reminder</a>
+            </div>
+          </div>
+          <div class="event-card">
+            <div class="event-card-img">🎁</div>
+            <div class="event-card-body">
+              <div class="event-date">June 1, 2026 · Instagram</div>
+              <h3>Beauty Bundle Giveaway</h3>
+              <p>Win a $150 Gray Brands beauty bundle! Follow us on Instagram and tag a friend to enter. Winner announced June 5.</p>
+              <a href="#" class="btn btn-outline btn-ghost" style="font-size:.8rem;padding:8px 16px">Enter Giveaway</a>
+            </div>
+          </div>
+          <div class="event-card">
+            <div class="event-card-img">🌸</div>
+            <div class="event-card-body">
+              <div class="event-date">June 14, 2026 · Virtual</div>
+              <h3>Wellness Workshop: Self-Care Rituals</h3>
+              <p>A relaxing virtual workshop covering aromatherapy, bath rituals, and the power of a mindful beauty routine.</p>
+              <a href="contact.html" class="btn btn-outline btn-ghost" style="font-size:.8rem;padding:8px 16px">Register Free</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Member Perks -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header centered">
+          <h2>Member Perks</h2>
+          <p>Join the Gray Brands community and unlock exclusive benefits</p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">🎁</div>
+            <h4>Exclusive Discounts</h4>
+            <p>Members get early access to sales, exclusive promo codes, and birthday discount surprises.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🌟</div>
+            <h4>First Look Access</h4>
+            <p>Be the first to know about new product launches, restocks, and limited-edition collections.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🎉</div>
+            <h4>Giveaway Entries</h4>
+            <p>Community members get automatic entry into our monthly product giveaways.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:var(--gap-xl)">
+          <a href="contact.html" class="btn btn-accent" data-i18n="joinNow">Join Now — It's Free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Cart</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span class="total" id="cart-subtotal-amt">$0.00</span>
+      </div>
+      <a href="cart.html" class="cart-checkout-btn btn" style="display:block;text-align:center">Checkout</a>
+      <button class="cart-view-btn" onclick="closeCart()">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">Gray <span>Brands</span></div>
+          <p>Premium beauty and wellness products for every woman.</p>
+          <div class="social-links">
+            <a href="#" class="social-link">f</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">♪</a>
+            <a href="#" class="social-link">𝕏</a>
+            <a href="#" class="social-link">G</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=hair">Hair</a></li>
+            <li><a href="shop.html?cat=cosmetics">Cosmetics</a></li>
+            <li><a href="shop.html?cat=perfume">Perfume</a></li>
+            <li><a href="shop.html?cat=jewelry">Jewelry</a></li>
+            <li><a href="shop.html?cat=soap">Soap &amp; Body</a></li>
+            <li><a href="shop.html?cat=accessories">Accessories</a></li>
+            <li><a href="shop.html?cat=wellness">Wellness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Gray Brands LLC. All rights reserved.</p>
+        <div class="payment-icons-footer">
+          <span class="payment-icon-footer">VISA</span>
+          <span class="payment-icon-footer">MC</span>
+          <span class="payment-icon-footer">AMEX</span>
+          <span class="payment-icon-footer">PayPal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js?v=1.0.0"></script>
+  <script src="js/main.js?v=1.0.0"></script>
+</body>
+</html>

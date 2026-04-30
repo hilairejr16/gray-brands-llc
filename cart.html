@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shopping Cart — Gray Brands LLC">
+  <title>Cart — Gray Brands LLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+</head>
+<body data-page="cart">
+
+  <header id="site-header">
+    <div class="promo-bar">
+      <span data-i18n="promoBar">Free shipping on orders over $50</span>
+    </div>
+    <div class="nav-top container">
+      <div class="nav-top-links">
+        <a href="#" data-i18n="signIn">Sign In</a>
+        <a href="#" data-i18n="trackOrder">Track Order</a>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span style="color:var(--border-dark)">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+    <div class="nav-main container">
+      <div class="nav-logo"><a href="index.html">Gray <span>Brands</span></a></div>
+      <form class="nav-search search-form" role="search">
+        <input type="search" data-i18n="searchPlaceholder" placeholder="Search products, brands…" aria-label="Search">
+        <button type="submit" aria-label="Search">🔍</button>
+      </form>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-action-btn cart-btn-wrap">
+          <span class="icon">🛒</span>
+          <span class="nav-action-label" data-i18n="cart">Cart</span>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    <nav>
+      <a href="index.html" data-i18n="home">Home</a>
+      <a href="shop.html" data-i18n="shop">Shop</a>
+      <a href="cart.html" data-i18n="cart">Cart</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html" data-i18n="home">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span data-i18n="cart">Cart</span>
+        </div>
+        <h1 data-i18n="cart">Cart</h1>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="cart-page-layout">
+          <div id="cart-page-items">
+            <!-- Rendered by JS -->
+          </div>
+          <div id="cart-page-summary">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+        <div style="margin-top:var(--gap-xl)">
+          <a href="shop.html" style="color:var(--text-secondary);font-size:0.9rem;display:inline-flex;align-items:center;gap:6px">
+            ← <span data-i18n="continueShopping">Continue Shopping</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- No cart drawer on cart page — the cart IS the page -->
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">Gray <span>Brands</span></div>
+          <p>Premium beauty and wellness products for every woman.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="TikTok">♪</a>
+            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="Google">G</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=hair">Hair</a></li>
+            <li><a href="shop.html?cat=cosmetics">Cosmetics</a></li>
+            <li><a href="shop.html?cat=perfume">Perfume</a></li>
+            <li><a href="shop.html?cat=jewelry">Jewelry</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Gray Brands LLC. All rights reserved.</p>
+        <div class="payment-icons-footer">
+          <span class="payment-icon-footer">VISA</span>
+          <span class="payment-icon-footer">MC</span>
+          <span class="payment-icon-footer">AMEX</span>
+          <span class="payment-icon-footer">PayPal</span>
+          <span class="payment-icon-footer">Debit</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js?v=1.0.0"></script>
+  <script src="js/main.js?v=1.0.0"></script>
+</body>
+</html>

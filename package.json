@@ -1,0 +1,15 @@
+{
+  "name": "gray-brands-llc",
+  "version": "1.0.0",
+  "description": "Gray Brands LLC - Beauty & Wellness E-Commerce",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "start": "npx serve . -p 3000"
+  },
+  "keywords": ["beauty", "ecommerce", "wellness"],
+  "author": "Jessica Hallman - Gray Brands LLC",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
