@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Gray Brands LLC</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+  <style>
+    .error-page {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--gap-xl);
+    }
+    .error-page .code {
+      font-family: var(--font-head);
+      font-size: clamp(6rem, 15vw, 10rem);
+      font-weight: 700;
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: var(--gap-md);
+    }
+    .error-page h1 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: var(--gap-md);
+    }
+    .error-page p {
+      color: var(--text-secondary);
+      max-width: 420px;
+      margin: 0 auto var(--gap-xl);
+      line-height: 1.7;
+    }
+    .error-links { display: flex; gap: var(--gap-md); justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <header id="site-header">
+    <div class="nav-main container">
+      <div class="nav-logo"><a href="index.html">Gray <span>Brands</span></a></div>
+      <div class="nav-actions" style="margin-left:auto">
+        <a href="shop.html" class="btn btn-accent" style="padding:8px 20px;font-size:.8rem">Shop Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="error-page">
+      <div>
+        <div class="code">404</div>
+        <h1>Oops — Page Not Found</h1>
+        <p>The page you're looking for has moved, been removed, or may never have existed. Let's get you back to the good stuff.</p>
+        <div class="error-links">
+          <a href="index.html" class="btn btn-accent">Go to Homepage</a>
+          <a href="shop.html" class="btn btn-outline">Shop All Products</a>
+        </div>
+        <div style="margin-top:var(--gap-2xl)">
+          <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:var(--gap-md)">Or browse by category:</p>
+          <div style="display:flex;gap:var(--gap-sm);justify-content:center;flex-wrap:wrap">
+            <a href="shop.html?cat=hair" class="cat-tab">Hair</a>
+            <a href="shop.html?cat=cosmetics" class="cat-tab">Cosmetics</a>
+            <a href="shop.html?cat=perfume" class="cat-tab">Perfume</a>
+            <a href="shop.html?cat=jewelry" class="cat-tab">Jewelry</a>
+            <a href="shop.html?cat=wellness" class="cat-tab">Wellness</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Gray Brands LLC. All rights reserved.</p>
+        <div class="payment-icons-footer">
+          <span class="payment-icon-footer">VISA</span>
+          <span class="payment-icon-footer">MC</span>
+          <span class="payment-icon-footer">AMEX</span>
+          <span class="payment-icon-footer">PayPal</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

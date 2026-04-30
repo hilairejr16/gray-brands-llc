@@ -12,7 +12,7 @@
 |---------|--------------|-------|
 | **GitHub** | https://github.com/hilairejr16/gray-brands-llc | Source code — push to `master` to deploy |
 | **Cloudflare Pages** | hilaire16@gmail.com | Auto-deploys from GitHub `master` branch |
-| **Live URL** | *(Set up after Cloudflare Pages connects to repo)* | |
+| **Live URL** | https://gray-brands-llc.pages.dev | Cloudflare Pages — auto-deploys on every push to `master` |
 
 ---
 
