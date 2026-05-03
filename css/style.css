@@ -220,8 +220,15 @@ h1, h2, h3, h4, h5 {
   color: var(--charcoal);
   letter-spacing: -0.01em;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 .nav-logo span { color: var(--accent); }
+.nav-logo-img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
 
 /* Search */
 .nav-search {
@@ -1184,6 +1191,11 @@ footer {
   margin-bottom: var(--gap-md);
 }
 .footer-brand .logo-text span { color: var(--accent); }
+.footer-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
 .footer-brand p { font-size: 0.875rem; line-height: 1.7; margin-bottom: var(--gap-lg); max-width: 300px; }
 .social-links { display: flex; gap: var(--gap-md); }
 .social-link {

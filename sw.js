@@ -1,6 +1,6 @@
 /* Gray Brands LLC — Service Worker
    CACHE_NAME: bump version string whenever CSS or JS changes */
-const CACHE_NAME = 'gray-brands-v1.0.0';
+const CACHE_NAME = 'gray-brands-v1.1.0';
 
 const PRECACHE = [
   '/',
@@ -15,6 +15,10 @@ const PRECACHE = [
   '/css/style.css',
   '/js/main.js',
   '/js/products.js',
+  '/logo.svg',
+  '/logo-light.svg',
+  '/logo-icon.svg',
+  '/favicon.svg',
 ];
 
 self.addEventListener('install', event => {

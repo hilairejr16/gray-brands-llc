@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Gray Brands LLC">
+  <title>Gray Brands LLC</title>
+  <!-- Charcoal rounded-square background -->
+  <rect width="200" height="200" rx="24" fill="#1A1A1A"/>
+  <!-- Rose gold accent ring (subtle) -->
+  <rect x="6" y="6" width="188" height="188" rx="20" fill="none" stroke="#C4956A" stroke-width="1.5" opacity="0.3"/>
+  <!-- Large "G" initial mark -->
+  <text x="100" y="132"
+        text-anchor="middle"
+        font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+        font-weight="700"
+        font-size="108"
+        fill="#C4956A">G</text>
+  <!-- "BRANDS" micro-label -->
+  <text x="100" y="168"
+        text-anchor="middle"
+        font-family="'Inter', Arial, Helvetica, sans-serif"
+        font-weight="600"
+        font-size="14"
+        fill="rgba(255,255,255,0.65)"
+        letter-spacing="0.2em">BRANDS</text>
+</svg>
