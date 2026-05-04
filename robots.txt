@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gray-brands-llc.pages.dev/sitemap.xml
+Sitemap: https://bonafidelyfe.com/sitemap.xml

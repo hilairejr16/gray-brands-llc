@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" role="img" aria-label="Gray Brands LLC">
-  <title>Gray Brands LLC</title>
-  <!-- Wordmark: white + rose gold — dark background version -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 52" role="img" aria-label="Bonafide Lyfe">
+  <title>Bonafide Lyfe</title>
+  <!-- Option 1 Light: italic serif "Bonafide" white + bold rose gold "Lyfe" — for dark backgrounds -->
   <text x="2" y="40"
         font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
-        font-size="38"
-        letter-spacing="-0.5">
-    <tspan font-weight="700" fill="#FFFFFF">Gray </tspan><tspan font-weight="600" fill="#C4956A">Brands</tspan>
+        font-size="36">
+    <tspan font-weight="400" font-style="italic" fill="#FFFFFF">Bonafide</tspan><tspan font-weight="700" fill="#C4956A"> Lyfe</tspan>
   </text>
-  <!-- Rose gold accent line under Brands -->
-  <line x1="88" y1="46" x2="220" y2="46" stroke="#C4956A" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="192" cy="46" r="2.5" fill="#C4956A" opacity="0.6"/>
 </svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 82" role="img" aria-label="Bonafide Lyfe">
+  <title>Bonafide Lyfe — Option 2: Stacked</title>
+  <!-- Option 2: Stacked — "BONAFIDE" small label above, large "LYFE" below -->
+  <!-- BONAFIDE — small-caps Inter, letter-spaced, charcoal -->
+  <text x="110" y="22"
+        text-anchor="middle"
+        font-family="'Inter', Arial, Helvetica, sans-serif"
+        font-weight="600"
+        font-size="12.5"
+        fill="#1A1A1A"
+        letter-spacing="0.26em">BONAFIDE</text>
+  <!-- Rose gold separator line -->
+  <line x1="14" y1="31" x2="206" y2="31" stroke="#C4956A" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <!-- LYFE — large Playfair Display, rose gold -->
+  <text x="110" y="73"
+        text-anchor="middle"
+        font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+        font-weight="700"
+        font-size="48"
+        fill="#C4956A">LYFE</text>
+</svg>

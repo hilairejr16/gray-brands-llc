@@ -1,4 +1,4 @@
-/* Gray Brands LLC — Main JS v1.0.0
+/* Bonafide Lyfe — Main JS v1.1.0
    Cart · Language Toggle · Search · Nav · UI Helpers */
 
 'use strict';
@@ -507,7 +507,7 @@ function renderProductDetail() {
         </div>
       </div>
       <div class="product-info">
-        <div class="product-brand">Gray Brands LLC</div>
+        <div class="product-brand">Bonafide Lyfe</div>
         <h1>${name}</h1>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
           <span class="stars">${'★'.repeat(Math.round(product.rating))}${'☆'.repeat(5-Math.round(product.rating))}</span>
@@ -575,7 +575,7 @@ function renderProductDetail() {
 
   /* Related products */
   renderRelated(product);
-  document.title = `${name} — Gray Brands LLC`;
+  document.title = `${name} — Bonafide Lyfe`;
 }
 
 function renderRelated(product) {

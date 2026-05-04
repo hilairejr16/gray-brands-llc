@@ -1,4 +1,4 @@
-/* Gray Brands LLC — Product Catalog v1.0.0
+/* Bonafide Lyfe — Product Catalog v1.0.0
    Add / edit products here. All pages reference this data. */
 
 window.GB_PRODUCTS = [

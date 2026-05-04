@@ -1,6 +1,6 @@
-/* Gray Brands LLC — Service Worker
+/* Bonafide Lyfe — Service Worker
    CACHE_NAME: bump version string whenever CSS or JS changes */
-const CACHE_NAME = 'gray-brands-v1.1.0';
+const CACHE_NAME = 'bonafide-lyfe-v1.2.0';
 
 const PRECACHE = [
   '/',
@@ -18,6 +18,8 @@ const PRECACHE = [
   '/logo.svg',
   '/logo-light.svg',
   '/logo-icon.svg',
+  '/logo-v2.svg',
+  '/logo-v3.svg',
   '/favicon.svg',
 ];
 

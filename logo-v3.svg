@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 56" role="img" aria-label="Bonafide Lyfe">
+  <title>Bonafide Lyfe — Option 3: Modern</title>
+  <!-- Option 3: Modern Bold — dramatic weight contrast, all sans-serif -->
+  <!-- Thin BONAFIDE in Inter light -->
+  <text x="2" y="22"
+        font-family="'Inter', Arial, Helvetica, sans-serif"
+        font-weight="300"
+        font-size="14"
+        fill="#6B6B6B"
+        letter-spacing="0.2em">BONAFIDE</text>
+  <!-- Thin accent line -->
+  <line x1="2" y1="27" x2="160" y2="27" stroke="#C4956A" stroke-width="0.75" opacity="0.4"/>
+  <!-- Heavy LYFE in Inter bold — dominant -->
+  <text x="2" y="54"
+        font-family="'Playfair Display', Georgia, 'Times New Roman', serif"
+        font-weight="700"
+        font-size="46"
+        fill="#1A1A1A">Lyfe<tspan fill="#C4956A">.</tspan></text>
+</svg>
