@@ -1,6 +1,6 @@
 /* Bonafide Lyfe — Service Worker
    CACHE_NAME: bump version string whenever CSS or JS changes */
-const CACHE_NAME = 'bonafide-lyfe-v1.2.0';
+const CACHE_NAME = 'bonafide-lyfe-v1.3.0';
 
 const PRECACHE = [
   '/',

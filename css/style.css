@@ -1018,7 +1018,85 @@ h1, h2, h3, h4, h5 {
   align-items: center;
   color: var(--text-secondary);
 }
-#paypal-button-container { margin-top: var(--gap-md); }
+#paypal-button-container { margin-top: 0; }
+
+/* ─── PAYMENT METHOD BUTTONS (cart page) ──────────────── */
+.pay-section-label {
+  font-size: 0.68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: var(--gap-md) 0 var(--gap-sm);
+  font-weight: 700;
+}
+.pay-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  margin: var(--gap-md) 0 var(--gap-sm);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+.pay-divider::before, .pay-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.pay-btn {
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition: opacity .15s ease, transform .15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: var(--gap-sm);
+  line-height: 1.25;
+  flex-direction: column;
+}
+.pay-btn:hover  { opacity: 0.87; transform: translateY(-1px); }
+.pay-btn:active { transform: translateY(0); }
+.pay-btn--stripe   { background: #635BFF; color: #fff; }
+.pay-btn--shop-pay { background: #5A31F4; color: #fff; }
+.pay-btn--tiktok   { background: #010101; color: #fff; }
+.pay-btn--afterpay { background: #B2FCE4; color: #000; }
+.pay-btn--klarna   { background: #FFB3C7; color: #1a1a1a; }
+.pay-btn--apple    { background: #000;    color: #fff; }
+.pay-btn--gpay     { background: #fff;    color: #000; border: 1.5px solid #dadce0; }
+.pay-btn--venmo    { background: #3D95CE; color: #fff; }
+.pay-btn small { font-size: 0.72rem; font-weight: 400; opacity: 0.85; }
+.pay-2col, .pay-3col {
+  display: grid;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-sm);
+}
+.pay-2col { grid-template-columns: 1fr 1fr; }
+.pay-3col { grid-template-columns: 1fr 1fr 1fr; }
+.pay-2col .pay-btn, .pay-3col .pay-btn { margin-bottom: 0; }
+.pay-card-icons {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 4px 0 var(--gap-sm);
+  flex-wrap: wrap;
+}
+
+/* ─── FOOTER PAYMENT BRAND COLORS ─────────────────────────── */
+.payment-icons-footer { flex-wrap: wrap; }
+.payment-icon-footer[data-brand="stripe"]   { background: #635BFF; color: #fff; }
+.payment-icon-footer[data-brand="shop-pay"] { background: #5A31F4; color: #fff; }
+.payment-icon-footer[data-brand="tiktok"]  { background: #010101; color: #fff; }
+.payment-icon-footer[data-brand="afterpay"]{ background: #B2FCE4; color: #000; }
+.payment-icon-footer[data-brand="klarna"]  { background: #FFB3C7; color: #000; }
+.payment-icon-footer[data-brand="apple"]   { background: #000;    color: #fff; }
+.payment-icon-footer[data-brand="gpay"]    { background: #fff;    color: #333; }
+.payment-icon-footer[data-brand="venmo"]   { background: #3D95CE; color: #fff; }
 
 /* 14. BLOG
    ============================================================ */

@@ -638,24 +638,56 @@ function renderCartPage() {
   const total = sub + shipping;
 
   if (summaryWrap) {
+    const install = (total / 4).toFixed(2);
     summaryWrap.innerHTML = `
       <div class="order-summary">
         <h3>${t('secureCheckout')}</h3>
         <div class="summary-row"><span>${t('subtotal')}</span><span>$${sub.toFixed(2)}</span></div>
         <div class="summary-row"><span>${t('shipping')}</span><span>${shipping === 0 ? t('free') : '$'+shipping.toFixed(2)}</span></div>
         <div class="summary-row total"><span>${t('orderTotal')}</span><span>$${total.toFixed(2)}</span></div>
-        <div style="margin:var(--gap-md) 0">
-          <p style="font-size:0.75rem;color:var(--text-muted);margin-bottom:var(--gap-sm)">${t('payWith')}:</p>
-          <div class="payment-methods">
-            <span class="payment-icon">VISA</span>
-            <span class="payment-icon">MC</span>
-            <span class="payment-icon">AMEX</span>
-            <span class="payment-icon">PayPal</span>
-            <span class="payment-icon">Debit</span>
-          </div>
-        </div>
+
+        <!-- Express Checkout -->
+        <p class="pay-section-label">Express Checkout</p>
         <div id="paypal-button-container"></div>
-        <p style="font-size:0.7rem;color:var(--text-muted);text-align:center;margin-top:var(--gap-sm)">
+        <button class="pay-btn pay-btn--shop-pay" onclick="handleShopPay()" style="margin-top:var(--gap-sm)">
+          ✦ Shop Pay
+        </button>
+        <button class="pay-btn pay-btn--tiktok" onclick="handleTikTokPay()">
+          ♪ TikTok Pay
+        </button>
+
+        <!-- Card via Stripe -->
+        <div class="pay-divider"><span>or pay with card</span></div>
+        <button class="pay-btn pay-btn--stripe" onclick="handleStripeCheckout(${total.toFixed(2)})">
+          💳 Pay with Card
+        </button>
+        <div class="pay-card-icons">
+          <span class="payment-icon">VISA</span>
+          <span class="payment-icon">MC</span>
+          <span class="payment-icon">AMEX</span>
+          <span class="payment-icon">Debit</span>
+        </div>
+
+        <!-- BNPL -->
+        <div class="pay-divider"><span>Buy Now, Pay Later</span></div>
+        <div class="pay-2col">
+          <button class="pay-btn pay-btn--afterpay" onclick="handleAfterPay()">
+            Afterpay<small>4 × $${install}</small>
+          </button>
+          <button class="pay-btn pay-btn--klarna" onclick="handleKlarna()">
+            Klarna<small>Pay in 4</small>
+          </button>
+        </div>
+
+        <!-- Digital Wallets -->
+        <div class="pay-divider"><span>Digital Wallets</span></div>
+        <div class="pay-3col">
+          <button class="pay-btn pay-btn--apple"  onclick="handleApplePay()"> Pay</button>
+          <button class="pay-btn pay-btn--gpay"   onclick="handleGooglePay()">G Pay</button>
+          <button class="pay-btn pay-btn--venmo"  onclick="handleVenmo()">Venmo</button>
+        </div>
+
+        <p style="font-size:0.7rem;color:var(--text-muted);text-align:center;margin-top:var(--gap-md)">
           🔒 Secure 256-bit SSL encryption
         </p>
       </div>`;
@@ -698,6 +730,89 @@ function renderPayPalButtons(amount) {
     }),
     onError: err => showToast('Payment error. Please try again.', 'error'),
   }).render('#paypal-button-container');
+}
+
+/* ─── PAYMENT HANDLERS ──────────────────────────────────────── */
+
+/* ── STRIPE ────────────────────────────────────────────────────
+   1. Create a free account at https://stripe.com
+   2. Go to Dashboard → Payment Links → Create a Link
+   3. Paste the link URL below (format: https://buy.stripe.com/xxxx)
+   Afterpay + Klarna are enabled inside Stripe Payment Methods settings */
+const STRIPE_PAYMENT_LINK = ''; /* ← paste your Stripe Payment Link URL */
+
+function handleStripeCheckout(amount) {
+  if (STRIPE_PAYMENT_LINK) {
+    window.open(STRIPE_PAYMENT_LINK, '_blank');
+  } else {
+    showToast('Card payments coming soon — use PayPal for now.', 'info');
+  }
+}
+
+/* ── SHOP PAY / SHOPIFY ────────────────────────────────────────
+   1. Create a Shopify store (or use existing)
+   2. Enable the Buy Button sales channel
+   3. Generate a storefront checkout URL and paste below */
+const SHOPIFY_CHECKOUT_URL = ''; /* ← paste your Shopify checkout URL */
+
+function handleShopPay() {
+  if (SHOPIFY_CHECKOUT_URL) {
+    window.open(SHOPIFY_CHECKOUT_URL, '_blank');
+  } else {
+    showToast('Shop Pay coming soon — use PayPal for now.', 'info');
+  }
+}
+
+/* ── TIKTOK SHOP ───────────────────────────────────────────────
+   1. Set up TikTok Shop at https://seller-us.tiktok.com
+   2. Paste your TikTok Shop storefront URL below */
+const TIKTOK_SHOP_URL = ''; /* ← paste your TikTok Shop URL */
+
+function handleTikTokPay() {
+  if (TIKTOK_SHOP_URL) {
+    window.open(TIKTOK_SHOP_URL, '_blank');
+  } else {
+    showToast('TikTok Shop link coming soon!', 'info');
+  }
+}
+
+/* ── AFTERPAY & KLARNA (via Stripe) ───────────────────────────
+   These are enabled as payment methods inside your Stripe account.
+   Once STRIPE_PAYMENT_LINK is set above, these will work. */
+function handleAfterPay() {
+  if (STRIPE_PAYMENT_LINK) {
+    window.open(STRIPE_PAYMENT_LINK, '_blank');
+  } else {
+    showToast('Afterpay available once Stripe is connected.', 'info');
+  }
+}
+function handleKlarna() {
+  if (STRIPE_PAYMENT_LINK) {
+    window.open(STRIPE_PAYMENT_LINK, '_blank');
+  } else {
+    showToast('Klarna available once Stripe is connected.', 'info');
+  }
+}
+
+/* ── DIGITAL WALLETS ───────────────────────────────────────────
+   Apple Pay + Google Pay work through Stripe or PayPal.
+   Venmo works through the PayPal button above. */
+function handleApplePay() {
+  if (STRIPE_PAYMENT_LINK) {
+    window.open(STRIPE_PAYMENT_LINK, '_blank');
+  } else {
+    showToast('Apple Pay available in Safari once Stripe is connected.', 'info');
+  }
+}
+function handleGooglePay() {
+  if (STRIPE_PAYMENT_LINK) {
+    window.open(STRIPE_PAYMENT_LINK, '_blank');
+  } else {
+    showToast('Google Pay available once Stripe is connected.', 'info');
+  }
+}
+function handleVenmo() {
+  showToast('Pay with Venmo via the PayPal button above.', 'info');
 }
 
 /* ─── BLOG ──────────────────────────────────────────────────── */
