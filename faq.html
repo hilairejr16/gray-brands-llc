@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about Bonafide Lyfe &mdash; shipping, returns, payments, products and more.">
+  <title>FAQ &mdash; Bonafide Lyfe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css?v=1.3.0">
+  <style>
+    .faq-section { margin-bottom: var(--gap-xl); }
+    .faq-section-title {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: var(--gap-md); padding-bottom: var(--gap-sm);
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; background: none; border: none; text-align: left;
+      padding: var(--gap-md) 0; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-family: var(--font-body); font-size: 0.95rem; font-weight: 600;
+      color: var(--text); gap: var(--gap-md);
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-icon {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+      background: var(--bg-warm); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; color: var(--accent); transition: transform .25s ease;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .25s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-answer-inner {
+      padding-bottom: var(--gap-md);
+      font-size: 0.9rem; line-height: 1.8; color: var(--text-secondary);
+    }
+    .faq-answer-inner a { color: var(--accent); }
+    .faq-contact-cta {
+      background: var(--bg-warm); border-radius: var(--radius-lg);
+      padding: var(--gap-xl); text-align: center; margin-top: var(--gap-2xl);
+    }
+  </style>
+</head>
+<body data-page="faq">
+
+  <header id="site-header">
+    <div class="promo-bar">
+      <span data-i18n="promoBar">Free shipping on orders over $50</span>
+    </div>
+    <div class="nav-top container">
+      <div class="nav-top-links">
+        <a href="#" data-i18n="signIn">Sign In</a>
+        <a href="#" data-i18n="trackOrder">Track Order</a>
+      </div>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <span style="color:var(--border-dark)">|</span>
+        <button class="lang-btn" data-lang="es">ES</button>
+      </div>
+    </div>
+    <div class="nav-main container">
+      <div class="nav-logo"><a href="index.html"><img src="logo.svg" alt="Bonafide Lyfe" class="nav-logo-img" width="220" height="38"></a></div>
+      <form class="nav-search search-form" role="search">
+        <input type="search" data-i18n="searchPlaceholder" placeholder="Search products, brands&hellip;">
+        <button type="submit">🔍</button>
+      </form>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-action-btn open-cart cart-btn-wrap">
+          <span class="icon">🛒</span>
+          <span class="nav-action-label" data-i18n="cart">Cart</span>
+          <span class="cart-count" style="display:none">0</span>
+        </a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <nav class="nav-categories container">
+      <a href="index.html" class="nav-cat-link" data-i18n="home">Home</a>
+      <a href="shop.html" class="nav-cat-link" data-i18n="shop">Shop</a>
+      <a href="blog.html" class="nav-cat-link" data-i18n="blog">Blog</a>
+      <a href="community.html" class="nav-cat-link" data-i18n="community">Community</a>
+      <a href="about.html" class="nav-cat-link" data-i18n="aboutUs">About</a>
+      <a href="contact.html" class="nav-cat-link" data-i18n="contactUs">Contact</a>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close">✕</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="blog.html">Blog</a>
+      <a href="community.html">Community</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-sep">/</span>
+          <span>FAQ</span>
+        </div>
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to the most common questions about shopping with Bonafide Lyfe.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" style="max-width:760px;margin:0 auto">
+
+        <!-- ORDERS & SHIPPING -->
+        <div class="faq-section">
+          <div class="faq-section-title">📦 Orders &amp; Shipping</div>
+
+          <div class="faq-item">
+            <button class="faq-question">How long does shipping take?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Standard shipping typically takes <strong>5&ndash;7 business days</strong>. Expedited shipping (2&ndash;3 business days) is available at checkout for an additional fee. Orders placed before 2 PM EST on business days are processed the same day.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you offer free shipping?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes! We offer <strong>free standard shipping on all orders over $50</strong>. No coupon code needed &mdash; the discount is applied automatically at checkout.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I track my order?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Once your order ships, you will receive a tracking number via email. You can also use the &ldquo;Track Order&rdquo; link in the navigation bar at the top of every page.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you ship internationally?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Currently we ship within the <strong>United States only</strong>. We are actively working on expanding international shipping &mdash; join our community to be notified when your country is added.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I change or cancel my order?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Orders can be modified or cancelled within <strong>1 hour of placement</strong>. After that, our fulfillment team begins processing and changes may not be possible. Please <a href="contact.html">contact us immediately</a> if you need to make a change.</div></div>
+          </div>
+        </div>
+
+        <!-- RETURNS -->
+        <div class="faq-section">
+          <div class="faq-section-title">🔄 Returns &amp; Exchanges</div>
+
+          <div class="faq-item">
+            <button class="faq-question">What is your return policy?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">We accept returns within <strong>30 days of delivery</strong> on unused, unopened items in their original packaging. To initiate a return, please <a href="contact.html">contact our support team</a> with your order number.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I exchange a product?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes! We offer exchanges for items of equal or lesser value within 30 days of purchase. If the exchange item is higher in price, you will be charged the difference. <a href="contact.html">Reach out to us</a> to get started.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What items are non-returnable?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">For hygiene and safety reasons, the following items cannot be returned: opened cosmetics, perfumes, skincare products, and items marked &ldquo;Final Sale.&rdquo; If you received a damaged or defective item, please contact us and we will make it right.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How long does a refund take?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Once we receive and inspect your return, refunds are processed within <strong>3&ndash;5 business days</strong>. The credit will appear on your original payment method within 5&ndash;10 business days depending on your bank.</div></div>
+          </div>
+        </div>
+
+        <!-- PAYMENTS -->
+        <div class="faq-section">
+          <div class="faq-section-title">💳 Payments</div>
+
+          <div class="faq-item">
+            <button class="faq-question">What payment methods do you accept?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">We accept <strong>Visa, Mastercard, American Express, Debit cards, PayPal, Shop Pay, Stripe, TikTok Pay, Apple Pay, Google Pay, Venmo, Afterpay, and Klarna</strong>. All transactions are encrypted and processed securely.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you offer Buy Now, Pay Later?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes! We offer two BNPL options: <strong>Afterpay</strong> (split into 4 interest-free payments) and <strong>Klarna</strong> (pay in 4, pay in 30 days, or monthly financing). Select your preferred option at checkout.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is it safe to enter my payment info on your site?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Absolutely. Our site uses <strong>SSL encryption</strong> and all payment information is processed by PCI-compliant third-party processors (Stripe, PayPal). We never store your full card details on our servers.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you charge sales tax?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Sales tax is calculated at checkout based on your shipping address and applicable state laws. The amount shown at checkout is the final tax amount &mdash; there are no hidden fees.</div></div>
+          </div>
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="faq-section">
+          <div class="faq-section-title">✨ Products</div>
+
+          <div class="faq-item">
+            <button class="faq-question">Are your products cruelty-free?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">We prioritize cruelty-free brands and clearly label which products are certified cruelty-free. We are continually working to expand our cruelty-free and vegan selections across all categories.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Are your products authentic?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><strong>100% yes.</strong> Every product we sell is sourced directly from authorized distributors and brand partners. We have a zero-tolerance policy for counterfeit goods.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you offer product samples?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">We occasionally include free samples with orders based on availability. Keep an eye on our <a href="community.html">Community page</a> and social media for sample promotions and giveaways.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What if a product I want is out of stock?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Click the &ldquo;Notify Me&rdquo; button on any out-of-stock product page to receive an email when it is back. You can also <a href="contact.html">message us</a> and we may be able to source it for you.</div></div>
+          </div>
+        </div>
+
+        <!-- TIKTOK SHOP -->
+        <div class="faq-section">
+          <div class="faq-section-title">♪ TikTok Shop</div>
+
+          <div class="faq-item">
+            <button class="faq-question">Can I shop on TikTok?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Yes! We have a TikTok Shop where you can purchase products directly within the TikTok app. Follow us <strong>@BonafideLyfe</strong> on TikTok and shop during our live events for exclusive deals.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Are TikTok Shop prices the same as your website?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">Prices are generally the same, but TikTok Shop often features <strong>exclusive flash deals and live event discounts</strong> not available on our website. We recommend following us on TikTok to catch the best deals.</div></div>
+          </div>
+        </div>
+
+        <!-- ACCOUNT -->
+        <div class="faq-section">
+          <div class="faq-section-title">👤 Account &amp; Community</div>
+
+          <div class="faq-item">
+            <button class="faq-question">Do I need an account to shop?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">No account is required to browse or purchase. However, creating an account lets you track orders, save your address, and access member-exclusive deals and early access to new products.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I join the Bonafide Lyfe community?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">It&rsquo;s free! Visit our <a href="community.html">Community page</a> or <a href="contact.html">reach out to us</a> to join. Members get exclusive discounts, first access to new products, automatic giveaway entries, and invites to virtual events.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do I contact customer support?<span class="faq-icon">+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner">You can reach us by email at <a href="mailto:JessicajHallman@gmail.com">JessicajHallman@gmail.com</a>, by phone at <a href="tel:8562664779">(856) 266-4779</a>, or through our <a href="contact.html">Contact page</a>. We respond within 24 hours, Monday&ndash;Friday 9am&ndash;6pm EST.</div></div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="faq-contact-cta">
+          <div style="font-size:2.5rem;margin-bottom:var(--gap-md)">💬</div>
+          <h3 style="margin-bottom:var(--gap-sm)">Still have questions?</h3>
+          <p style="color:var(--text-secondary);margin-bottom:var(--gap-lg)">Our team is ready to help. Reach out anytime and we&rsquo;ll get back to you within 24 hours.</p>
+          <a href="contact.html" class="btn btn-accent">Contact Us</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3 data-i18n="cart">Cart</h3>
+      <button class="cart-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items-body"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span data-i18n="subtotal">Subtotal</span>
+        <span class="total" id="cart-subtotal-amt">$0.00</span>
+      </div>
+      <a href="cart.html" class="cart-checkout-btn btn" style="display:block;text-align:center" data-i18n="checkout">Checkout</a>
+      <button class="cart-view-btn" onclick="closeCart()" data-i18n="continueShopping">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text"><img src="logo-light.svg" alt="Bonafide Lyfe" class="footer-logo-img" width="210" height="34"></div>
+          <p>Premium beauty and wellness products for every woman.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="TikTok">♪</a>
+            <a href="#" class="social-link" aria-label="X / Twitter">𝕏</a>
+            <a href="#" class="social-link" aria-label="LinkedIn" style="font-size:.75rem;font-weight:700">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=hair">Hair</a></li>
+            <li><a href="shop.html?cat=cosmetics">Cosmetics</a></li>
+            <li><a href="shop.html?cat=perfume">Perfume</a></li>
+            <li><a href="shop.html?cat=jewelry">Jewelry</a></li>
+            <li><a href="shop.html?cat=soap">Soap &amp; Body</a></li>
+            <li><a href="shop.html?cat=wellness">Wellness</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="jobs.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns &amp; Exchanges</a></li>
+            <li><a href="contact.html">Customer Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="legal.html">Legal Hub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Bonafide Lyfe &middot; Gray Brands LLC</p>
+        <div class="footer-legal-links">
+          <a href="privacy-policy.html">Privacy</a><span>&middot;</span>
+          <a href="terms.html">Terms</a><span>&middot;</span>
+          <a href="cookie-policy.html">Cookies</a><span>&middot;</span>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <div class="payment-icons-footer">
+          <span class="payment-icon-footer">VISA</span>
+          <span class="payment-icon-footer">MC</span>
+          <span class="payment-icon-footer">AMEX</span>
+          <span class="payment-icon-footer">PayPal</span>
+          <span class="payment-icon-footer" data-brand="stripe">Stripe</span>
+          <span class="payment-icon-footer" data-brand="afterpay">Afterpay</span>
+          <span class="payment-icon-footer" data-brand="klarna">Klarna</span>
+          <span class="payment-icon-footer" data-brand="apple"> Pay</span>
+          <span class="payment-icon-footer" data-brand="gpay">G Pay</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js?v=1.0.0"></script>
+  <script src="js/main.js?v=1.3.0"></script>
+  <script>
+    /* FAQ accordion */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>

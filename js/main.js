@@ -896,3 +896,29 @@ function initServiceWorker() {
     navigator.serviceWorker.register('/sw.js').catch(() => {});
   }
 }
+
+/* ─── COOKIE CONSENT BANNER ─────────────────────────────────── */
+(function initCookieBanner() {
+  const COOKIE_KEY = 'bl_cookie_consent';
+  const banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+
+  /* If already decided, don't show */
+  if (localStorage.getItem(COOKIE_KEY)) return;
+
+  /* Show after short delay so page paints first */
+  setTimeout(() => banner.classList.add('visible'), 800);
+
+  document.getElementById('cookie-accept').addEventListener('click', () => {
+    localStorage.setItem(COOKIE_KEY, 'accepted');
+    banner.classList.remove('visible');
+  });
+
+  const declineBtn = document.getElementById('cookie-decline');
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem(COOKIE_KEY, 'declined');
+      banner.classList.remove('visible');
+    });
+  }
+})();

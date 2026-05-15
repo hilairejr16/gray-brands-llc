@@ -1,5 +1,5 @@
 /* ============================================================
-   Gray Brands LLC — Main Stylesheet v1.0.0
+   Gray Brands LLC — Main Stylesheet v1.3.0
    Palette: Charcoal + Rose Gold | Beauty Retail Aesthetic
    ============================================================ */
 
@@ -1258,7 +1258,7 @@ footer {
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: var(--gap-xl);
   margin-bottom: var(--gap-2xl);
 }
@@ -1396,7 +1396,7 @@ footer {
 @media (max-width: 1024px) {
   .products-grid { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(3, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: var(--gap-lg); }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: var(--gap-lg); }
   .shop-layout { grid-template-columns: 200px 1fr; }
   .product-detail { gap: var(--gap-xl); }
   .cart-page-layout { grid-template-columns: 1fr 300px; }
@@ -1433,4 +1433,68 @@ footer {
   .products-grid { grid-template-columns: repeat(2, 1fr); gap: var(--gap-sm); }
   .cart-drawer { width: 100vw; }
   .nav-logo a { font-size: 1.4rem; }
+}
+
+/* 23. FOOTER LEGAL LINKS
+   ============================================================ */
+.footer-legal-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+}
+.footer-legal-links a {
+  color: rgba(255,255,255,0.5);
+  transition: color var(--ease);
+}
+.footer-legal-links a:hover { color: var(--accent); }
+.footer-legal-links span { color: rgba(255,255,255,0.25); }
+
+/* 24. COOKIE CONSENT BANNER
+   ============================================================ */
+.cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 9000;
+  background: var(--charcoal);
+  border-top: 2px solid var(--accent);
+  padding: var(--gap-md) 0;
+  transform: translateY(100%);
+  transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+.cookie-banner.visible { transform: translateY(0); }
+.cookie-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xl);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cookie-banner-text { flex: 1; min-width: 260px; }
+.cookie-banner-text p {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  margin: 0;
+}
+.cookie-banner-text a { color: var(--accent); }
+.cookie-banner-actions {
+  display: flex;
+  gap: var(--gap-sm);
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+.cookie-decline {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.7);
+  padding: 8px 18px;
+  font-size: 0.8rem;
+}
+.cookie-decline:hover { border-color: white; color: white; }
+@media (max-width: 600px) {
+  .cookie-banner-inner { flex-direction: column; align-items: flex-start; gap: var(--gap-md); }
+  .cookie-banner-actions { width: 100%; }
 }
